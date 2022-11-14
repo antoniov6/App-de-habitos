@@ -1,0 +1,580 @@
+button{
+  cursor: pointer;
+}
+
+.check:checked {
+  accent-color: var(--sucess);
+}
+
+.botaoTodos:focus{
+  background: var(--brand-1);
+    color: white;
+    border-radius: 0.2rem;
+}
+.botaoConcluidos{
+  width: 5.5rem;
+}
+.botaoConcluidos:focus{
+  background: var(--brand-1);
+  color: white;
+  border-radius: 0.2rem;
+  width: 5.5rem;
+}
+
+.modal_geral {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.botaoAzulClaro{
+  background-color: #A0ADF9;
+}
+
+.modal-inner {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 1rem;
+  gap: 1rem;
+  font-family: "Inter", sans-serif;
+  border-radius: 0.5rem;
+  animation-duration: .7s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-bottom: 0%;
+    width: 100%;
+  }
+}
+
+.fecharModal_modal-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.fecharModal_modal-inner img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.modal-inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fecharModal_modal-inner h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+  color: var(--grey-1);
+}
+
+.fecharModal_modal-inner button {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal-inner input,
+textarea,
+button,
+select {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.modal-inner input,
+textarea,
+select {
+  background-color: var(--grey-5);
+  resize: none;
+}
+.modal_excluirHabito{
+    display: flex;
+}
+.modal-inner input,
+textarea::placeholder {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.botaoAzulEscuro {
+  background-color: var(--brand-1);
+  color: #ffffff;
+}
+.botaoAzulEscuroSalvar {
+  background-color: var(--brand-4);
+  color: #ffffff;
+  width: 12rem;
+}
+
+
+.botaoExcluir {
+  border: 2px solid #f1f3f5;
+  background-color: rgba(37, 37, 37, 0.041);
+}
+
+
+#buttonFechar {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.status--EditarHabito {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+label {
+  font-size: 14px;
+  color: var(--grey-2);
+}
+#placeholder-textarea::placeholder {
+  font-size: 14px;
+}
+#placeholder {
+  font-size: 13px;
+}
+.textarea-altura {
+  height: 4rem;
+}
+
+.divExcluirEsteHabito{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.primeiroBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+    height: 2.5rem;
+}
+.primeiroBox h2 {
+    color: var(--brand-1);
+}
+.divExcluirEsteHabito h2{
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.divExcluirEsteHabito p{
+    font-size: 1rem;
+}
+
+
+.primeiroBox > .btnLogout {
+    background: var(--brand-1);
+    color: white;
+    border-radius: 0.2rem;
+}
+.botoes_excluirHabito button{
+    padding: 0.5rem;
+}
+
+.botaoCinza{
+    background-color: var(--grey-5);
+}
+
+.botaoVermelho{
+    background-color: var(--error-1);
+    width: max-content;
+}
+
+
+
+
+@media (min-width: 1024px) {
+   
+  .modal-inner {
+    width: 31.375rem;
+    height: 34.375rem;
+  }
+
+
+  .modal-inner form {
+    width: 90%;
+  }
+
+  .modal-inner div {
+    width: 90%;
+  }
+  .modal-inner .botton-div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .botaoExcluir {
+    border: 2px solid #f1f3f5;
+    background-color: rgba(37, 37, 37, 0.041);
+    width: 10rem;
+    height: 2.5rem;
+  }
+  .botaoAzulEscuroSalvar {
+    background-color: var(--brand-4);
+    color: #ffffff;
+    width: 15rem;
+    height: 2.5rem;
+  }
+
+  #placeholder-textarea::placeholder {
+    font-size: 17px;
+  }
+  #placeholder {
+    font-size: 18px;
+  }
+
+  .select-categorias > option{
+    width: 100px;
+
+  }
+
+    .modal-inner div {
+        width: 90%;
+    }
+
+
+    .editarUsuario_modal-inner{
+        height: 30vh;
+    }
+
+    .excluirHabito_modal-inner{
+        height: 20vh;
+    }
+
+    .botoes_excluirHabito{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #botaoCancelar_excluirHabito{
+        width: 10rem;
+    }
+
+
+}
+
+body {
+  font-family: var(--font);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.primeiroBox h2 {
+  color: var(--brand-1);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.primeiroBox img {
+  width: 30px;
+}
+
+.primeiroBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  height: 2.5rem;
+
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;  
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color:var(--brand-4);
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+  border-radius:0.250rem;
+  border: whitesmoke;
+}
+
+.dropdown-content a {
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  border-radius: 0.250rem;
+}
+
+.dropdown-content a:hover {
+  background-color:var(--brand-4);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media  (max-width: 490px){
+  .dropdown-content a {
+    display: flex;
+  }
+}
+
+.dropdown:hover .dropbtn {
+  background-color:  #f9f9f9;
+}
+
+
+
+
+.segundoBox {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 7rem;
+  background: var(--brand-1);
+  padding: 0 0 0 1rem;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.segundoBox img {
+  width: 50px;
+  border: 2px solid #ffffff;
+  border-radius: 5rem;
+}
+
+.secaoCabecalho div {
+  width: inherit;
+  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+.secaoCabecalho h3 {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 0 0 1rem;
+}
+
+.secaoCabecalho {
+  width: 100vw;
+  height: 6rem;
+
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div button {
+  border: none;
+  background-color: transparent;
+  width: 4rem;
+  height: 2rem;
+}
+
+.botaoCriar {
+  background: var(--brand-1);
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.descricao,
+.categoria {
+  display: none;
+}
+
+.status,
+.titulo,
+.editar {
+  opacity: 0.5;
+}
+
+table {
+  width: max-content;
+}
+
+tr {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.092);
+  height: 2.3rem;
+}
+th{
+  display: flexbox;
+  align-items: center;
+  height: inherit;
+}
+
+.carregarMais {
+  width: 7rem;
+  margin-top: 2rem;
+  background-color: var(--brand-1);
+  border: unset;
+  color: #ffffff;
+  border-radius: 0.2rem;
+}
+
+.check:checked {
+  background-color: var(--sucess);
+}
+
+.conteudoDescricao,
+.conteudoCategoria {
+  display: none;
+}
+
+.editar {
+  width: 20vw;
+}
+
+.conteudoEditar {
+  font-weight: 600;
+}
+
+.titulo {
+  width: 55vw;
+  display: flex;
+}
+
+.status {
+  width: 25vw;
+}
+
+.conteudoTitulo {
+  display: flex;
+}
+
+
+
+@media (min-width: 1000px) {
+  .secaoCabecalho {
+    flex-direction: row;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-between;
+    max-width: 900px;
+  }
+  tr{
+    display: flexbox;
+    align-items: center;
+  }
+  th{
+    height: max-content;
+  }
+
+  .secaoCabecalho div {
+    width: 200px;
+  }
+
+  .conteudoDescricao{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+  }
+
+  .categoria,
+  .descricao,
+  .conteudoCategoria {
+    display: flex;
+    opacity: 0.5;
+    width: 100px;
+    justify-content: center;
+  }
+
+  .descricao{
+    display: flex;
+    opacity: 0.5;
+    width: 300px;
+    justify-content: center;
+  }
+
+  .titulo,
+  .conteudoTitulo {
+    width: 400px;
+    padding: 0 0 0 0.5rem;
+  }
+
+  .status {
+    width: 120px;
+  }
+
+  .check {
+    width: 100px;
+  }
+
+  .editar,
+  .conteudoEditar {
+    width: 100px;
+  }
+
+  .cabecalhoTabela {
+    display: flex;
+    width: 100vw;
+  }
+
+  .conteudoTabela {
+    display: flex;
+  }
+
+  table {
+    border: 2px solid rgba(0, 0, 0, 0.098);
+  }
+
+  table,
+  tr,
+  th {
+    max-width: 1000px;
+  }
+}
+
+
+
+.divCategoriaStyle{
+  background-color: var(--brand-4);
+  color: var(--brand-1);
+  font-weight: 500;
+  width: 90%;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+
+}
+
+.conteudoCategoria{
+  opacity: 1;
+}

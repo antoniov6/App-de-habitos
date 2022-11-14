@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenzie Habit Login</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <!-- <link rel="stylesheet" href="./src/css/base.css"> -->
+    <link rel="stylesheet" href="./src/css/componentes.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="box-habito">
+            <h1>KenzieHabit</h1>
+            <h2>If you are going to use a passage of Lorem Ipsum</h2>
+            <p>you need to be sure there isn't anything</p>
+        </div>
+
+        <div class="box-login">
+            <h2>Login</h2>
+
+            <form id="formLogin">
+                <label for="email">Usuário</label>
+                <input class="email" type="text" name="email" placeholder="Email" id="inputSenha">
+                <label for="password">Senha</label>
+                <input class="senha" type="password" name="password" placeholder="Senha">
+                <button type="button">Entrar</button>
+            </form>
+        </div>
+    </main>
+    <!-- Pop-Up de Login Incorreto -->
+    <div class="div--Container">
+        <div class="loginIncorreto">
+            <p id="txt-loginIncorreto">
+                Usuário ou Senha incorretos.
+            </p>
+            <button class="btn-fechar-loginIncorreto">Fechar</button>
+
+        </div>
+    </div>
+    <script type="module" src="./src/scripts/index.login.js"></script>
+
+
+</body>
+
+</html>

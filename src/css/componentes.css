@@ -1,0 +1,17 @@
+:root {
+    --brand-1: #415AF3;
+    --brand-2: #4150D2;
+    --brand-3: #D7E4FB;
+    --brand-4:#A0ADF9;
+    --grey-1: #212529;
+    --grey-2: #343A40;
+    --grey-3: #ADB5BD;
+    --grey-4: #E9ECEF;
+    --grey-5: #F1F3F5;
+    --grey-6: #F8F9FA;
+    --sucess: #56CF8E;
+    --error-1: #E64445;
+    --error-2: #F03839;
+
+    --font: 'Inter', sans-serif;
+}

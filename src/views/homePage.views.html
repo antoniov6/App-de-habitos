@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenzie Habit</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/componentes.css" />
+    <link rel="stylesheet" href="../css/homePage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <header>
+        <div class="primeiroBox">
+            <h2>KenzieHablit</h2>
+            <div class="dropdown">
+                <button class="figureUser dropbtn">
+
+                </button>
+                <div class="dropdown-content">
+                    <a class="linkEditar" href="#">Editar Perfil</a>
+                    <a class="linkLogout" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="segundoBox">
+
+        </div>
+    </header>
+
+    <main>
+        <section class="secaoCabecalho">
+            <h3>Tarefas</h3>
+            <div>
+                <button class="botaoTodos">Todos</button>
+                <button class="botaoConcluidos">Concluídos</button>
+                <button class="botaoCriar">Criar</button>
+            </div>
+        </section>
+
+        <section class="secaoTabela">
+            <table style="flex-direction: column;">
+                <tr class="cabecalhoTabela">
+                    <th class="status">Status</th>
+                    <th class="titulo">Titulo</th>
+                    <th class="descricao">Descrição</th>
+                    <th class="categoria">Categoria</th>
+                    <th class="editar">Editar</th>
+                </tr>
+
+                <!-- <tr class="conteudoTabela">
+                    <th class="conteudoStatus"><input type="checkbox" class="check"></th>
+                    <th class="conteudoTitulo">Titulo</th>
+                    <th class="conteudoDescricao">Descrição</th>
+                    <th class="conteudoCategoria"><div class="divCategoriaStyle">Categoria</div></th>
+                    <th class="conteudoEditar">Editar</th>
+                </tr> -->
+
+
+            </table>
+        </section>
+        <button class="carregarMais">Carregar mais</button>
+    </main>
+
+    <!-- MODAL CRIAR HABITO -->
+    <div class="modal_geral" id="criarHabito">
+        <div class="modal-inner">
+            <div class="fecharModal_modal-inner">
+                <h2>Criar hábito</h2>
+                <button id="buttonFechar">
+                    <img src="../assets/img/x.png" alt="Fechar" class="imageFechar" />
+                </button>
+            </div>
+            <form>
+                <label for="titulo">Título</label>
+                <input type="text" name="titulo" placeholder="Digitar título" class="inputTitulo" />
+                <label for="descricao">Descrição</label>
+                <textarea class="areadescricao" maxlength="20" minlength="5" name="descricao" cols="30" rows="10"
+                    placeholder="Digitar descrição"></textarea>
+                <label for="categoria">Categoria</label>
+                <select class="areacategoria" name="categoria">
+                    <option value="Saude">Saude</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Casa">Casa</option>
+                </select>
+                <button type="button" class="botaoAzulEscuro">Inserir</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- MODAL EDITAR HABITO -->
+    <div class="modal_geral" id="modal_editarHabito">
+        <div class="modal-inner">
+            <div class="fecharModal_modal-inner">
+
+                <h2>Editar hábito</h2>
+
+                <button id="buttonFechar">
+                    <img src="../assets/img/x.png" alt="Fechar" class="imageFecharEdit" />
+                </button>
+            </div>
+            <form>
+                <label for="titulo">Título</label>
+                <input id="placeholder" type="text" name="habit_title"
+                    placeholder="Fazer exercícios segunda pela manhã" />
+                <label for="descricao">Descrição</label>
+                <textarea class="textarea-altura" name="habit_description" id="placeholder-textarea" cols="30" rows="10"
+                    placeholder="Ir correr na praça próximo de casa às 7h:30min da manhã"></textarea>
+                <label for="categoria">Categoria</label>
+                <select class="select-categorias" name="habit_category">
+                    <option class="option-criarHabito" value="saude">Saude</option>
+                    <option class="option-criarHabito" value="trabalho">Trabalho</option>
+                    <option class="option-criarHabito" value="casa">Casa</option>
+                    <option class="option-criarHabito" value="lazer">Lazer</option>
+                    <option class="option-criarHabito" value="estudos">Estudos</option>
+
+                </select>
+                <div class="status--EditarHabito">
+                    <label for="checkbox">Status</label>
+                    <input name="habit_status" type="checkbox">
+
+                </div>
+                <div class="bottom-div">
+                    <button class="botaoExcluir">Excluir</button>
+                    <button class="botaoAzulEscuroSalvar" id="botaoSalvarAlteracoes">Salvar alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL EXCLUIR HABITO -->
+    <div class="modal_geral" id="modal_excluirHabito">
+        <div class="modal-inner excluirHabito_modal-inner">
+            <div class="fecharModal_modal-inner">
+                <h2>Excluir hábito</h2>
+                <button id="buttonFechar">
+                    <img src="../assets/img/x.png" alt="Fechar" class="imageFecharExcluir">
+                </button>
+            </div>
+            <div class="divExcluirEsteHabito">
+                <h2>Certeza que deseja excluir este hábito?</h2>
+                <p>Após executar essa ação não será possível desfazer</p>
+            </div>
+            <div class="botoes_excluirHabito">
+                <button class="botaoCinza" id="botaoCancelar_excluirHabito">cancelar</button>
+                <button class="botaoVermelho" id="botaoExcluirHabito">Sim, excluir este hábito</button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+    <!-- MODAL EDITAR USUARIO -->
+    <div class="modal_geral" id="modal_editarUsuario">
+        <div class="modal-inner editarUsuario_modal-inner">
+            <div class="fecharModal_modal-inner">
+                <h2>Editar perfil</h2>
+                <button id="buttonFecharEditarUsuario">
+                    <img src="../assets/img/x.png" alt="Fechar" class="imageFechar">
+                </button>
+            </div>
+            <form>
+                <label for="nome">Nome</label>
+                <input type="text" name="usr_name" placeholder="Digitar nome">
+                <label for="url">URL da imagem do perfil</label>
+                <input name="usr_image" id="" cols="30" rows="10" placeholder="https://imagem.com.br"></input>
+                <button class="botaoAzulClaro" id="botaoInserir">Inserir</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/homePage.scripts.js"></script>
+</body>
+
+</html>
